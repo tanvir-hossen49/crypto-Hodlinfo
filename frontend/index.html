@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuadB | Home</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="./app/style.css">
+    <!-- js link -->
+    <script src="./app/app.js" defer></script>
+</head>
+<body>
+    <nav>
+        <a href="#">QUADB</a>
+
+        <div id="filter-group">
+            <select name="currency" id="currency">
+                <option value="inr">inr</option>
+            </select>
+
+            <select name="coin-currency" id="coin-currency">
+                <option value="btc">btc</option>
+                <option value="btc">eth</option>
+                <option value="btc">xrp</option>
+            </select>
+
+            <button>buy btc</button>
+        </div>
+
+        <div id="right-nav">
+            <div class="timer"><span id="timer-count">60</span></div>
+            <div class="connect-telegram">
+                <img src="./asset/telegram.png" alt="telegram icon">
+                <span>Connect Telegram</span>
+            </div>
+            <div class="toggle-dark-light">
+                <input type="checkbox" id="switch" />
+                <label for="switch">Toggle</label>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero">
+            <div class="common-heading">
+                <h4>0.71 %</h4>
+                <p>5 Mins</p>
+            </div>
+            <div class="common-heading">
+                <h4>0.71 %</h4>
+                <p>1 Hour</p>
+            </div>
+            <div class="large-heading">
+                <h4>Best Price to Trade</h4>
+                <h2>₹ 25,07,327</h2>
+                <p>Average BTC/INR net price including commission</p>
+            </div>
+            <div class="common-heading">
+                <h4>0.71 %</h4>
+                <p>1 Day</p>
+            </div>
+            <div class="common-heading">
+                <h4>0.71 %</h4>
+                <p>7 Days</p>
+            </div>
+        </section>
+
+        <section id="crypto-table">
+            <table>
+                <thead>
+                   <tr>
+                        <th>#</th>
+                        <th>Platform</th>
+                        <th>Last Traded Price</th>
+                        <th>Buy / Sell Price</th>
+                        <th>Difference</th>
+                        <th>Savings</th>
+                   </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="./asset/crypto-logo.png" alt="crypto logo"><span>WazirX</span></td>
+                        <td>₹ 22,80,001</td>
+                        <td>₹ 22,80,001 / ₹ 22,91,000</td>
+                        <td>5.32 %</td>
+                        <td>▲ ₹ 1,28,122</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="./asset/crypto-logo.png" alt="crypto logo"><span>WazirX</span></td>
+                        <td>₹ 22,80,001</td>
+                        <td>₹ 22,80,001 / ₹ 22,91,000</td>
+                        <td class="color-red">-5.32 %</td>
+                        <td class="color-red">▼ ₹ 1,28,122</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="./asset/crypto-logo.png" alt="crypto logo"><span>WazirX</span></td>
+                        <td>₹ 22,80,001</td>
+                        <td>₹ 22,80,001 / ₹ 22,91,000</td>
+                        <td>-5.32 %</td>
+                        <td>▼ ₹ 1,28,122</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="./asset/crypto-logo.png" alt="crypto logo"><span>WazirX</span></td>
+                        <td>₹ 22,80,001</td>
+                        <td>₹ 22,80,001 / ₹ 22,91,000</td>
+                        <td>-5.32 %</td>
+                        <td>▼ ₹ 1,28,122</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="./asset/crypto-logo.png" alt="crypto logo"><span>WazirX</span></td>
+                        <td>₹ 22,80,001</td>
+                        <td>₹ 22,80,001 / ₹ 22,91,000</td>
+                        <td>-5.32 %</td>
+                        <td>▼ ₹ 1,28,122</td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+        </section>
+        <hr>
+    </main>
+
+    <footer class="section">
+        <div>
+            <div>Copyright © 2019</div>
+            <div style="margin-left: 15px">HodlInfo.com</div>
+            <div style="margin-left: auto;">
+                <a href="mailto:support@hodlinfo.com" class="footer-text-link">Support</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

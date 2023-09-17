@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #6ccacb;
+    --secondary-color: #ffffff;
+    --danger-color: #dc3545;
+    --background-color: #191d28;
+    --filter-bg-color: #2e3241;
+    --filter-bg-color-light: #f8f9fa;
+}
+
+body.night{
+    --primary-color: #6ccacb;
+    --secondary-color: #000;
+    --danger-color: #dc3545;
+    --background-color: #fff;
+    --filter-bg-color: #eef5fc;
+    --filter-bg-color-light: #eef5fc;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr{
+    height: 1px;
+}
+
+section, .section{
+    padding-left: 25px;    
+    padding-right: 25px;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--background-color);
+}
+
+/* -------------------
+NAVIGATION BAR STYLING
+----------------------
+*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 0px;
+}
+nav > a, nav #filter-group, nav #right-nav{
+    flex: 1;
+}
+nav > a{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+#filter-group select, #filter-group > button{
+    background-color: var(--filter-bg-color);
+    color: var(--secondary-color);
+    border: none;
+    margin: 5px 10px 5px 0;
+    padding: 6px 20px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+#right-nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: right;
+    gap: 5px;
+}
+#right-nav .timer{
+    user-select: none;
+    color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#right-nav .connect-telegram{
+    user-select: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 400;
+    margin: 10px;
+    padding: 6px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#right-nav .connect-telegram img{
+    height: 15px;
+    margin-right: 5px;
+}
+#right-nav .connect-telegram span{
+    white-space: nowrap;
+}
+#right-nav .toggle-dark-light{
+    display: flex;
+    align-items: center;
+}
+#right-nav .toggle-dark-light input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+#right-nav .toggle-dark-light label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 60px;
+    height: 34px;
+    background: var(--filter-bg-color-light);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+#right-nav .toggle-dark-light label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    width: 26px;
+    height: 26px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+#right-nav .toggle-dark-light input:checked + label {
+    background: var(--filter-bg-color);
+}
+#right-nav .toggle-dark-light input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+#right-nav .toggle-dark-light label:active:after {
+    width: 26px;
+}
+@media screen and (max-width: 768px) {
+    nav{
+        flex-direction: column;
+        padding: 15px 25px 0px;
+    }
+}
+
+/* -------------------
+HERO SECTION STYLING
+----------------------
+*/
+#hero{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#hero .common-heading h4{
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--primary-color);
+}
+#hero .common-heading p{
+    color:var(--secondary-color);
+    opacity: .45;
+    font-weight: 300;
+    font-size: 20px;
+}
+#hero .large-heading{
+    max-width: 40%;
+}
+#hero .large-heading h2{
+    font-weight: 400;
+    font-size: 80px;
+    color: var(--secondary-color);
+}
+#hero .large-heading h4{
+    opacity: .45;
+    font-weight: 300;
+    font-size: 28px;
+    letter-spacing: .75px;
+    color: var(--secondary-color);
+}
+#hero .large-heading p{
+    opacity: .45;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: .75px;
+    color: var(--secondary-color);
+}
+@media screen and (max-width: 992px) {
+    #hero .common-heading h4{
+        font-size: 20px;
+    }
+    #hero .common-heading p{
+        font-size: 14px;
+    }
+    #hero .large-heading h4{
+        font-size: 20px;
+    }
+    #hero .large-heading h2{
+        font-size: 50px;
+    }
+    #hero .large-heading p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #hero .common-heading h4{
+        font-size: 16px;
+    }
+    #hero .common-heading p{
+        font-size: 10px;
+    }
+    #hero .large-heading h4{
+        font-size: 16px;
+    }
+    #hero .large-heading h2{
+        font-size: 20px;
+    }
+    #hero .large-heading p{
+        font-size: 8px;
+    }
+}
+
+/* -------------------
+CRYPTO TABLE STYLING
+----------------------
+*/
+#crypto-table table{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    text-wrap: nowrap;
+    margin: 25px 0;
+}
+#crypto-table thead th{
+    color: var(--secondary-color);
+    font-size: 24px;
+    font-weight: 500;
+    opacity: .45;
+}
+#crypto-table table tbody tr{
+    background-color: var(--filter-bg-color);
+    border-radius: 10px !important;
+    border: 1px solid #000;
+}
+#crypto-table tbody td:first-child {
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
+}
+#crypto-table tbody td:last-child {
+    border-bottom-right-radius: 10px; 
+    border-top-right-radius: 10px; 
+}
+#crypto-table tbody td{
+    font-size: 24px;
+    font-weight: 500;
+    padding: 0.75rem;
+    color: var(--secondary-color);
+}
+#crypto-table tbody td:nth-child(5),
+#crypto-table tbody td:last-child{
+    color: var(--primary-color);
+}
+#crypto-table tbody td.color-red{
+    color: var(--danger-color);
+}
+#crypto-table tbody td:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#crypto-table tbody td:nth-child(2) img {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+
+/* -------------------
+FOOTER STYLING
+----------------------
+*/
+footer > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary-color);
+    opacity: .45;
+    white-space: nowrap;
+    padding-right: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 15px 0;
+}
+footer .footer-text-link{
+    color: var(--secondary-color);
+    opacity: 3;
+}
